@@ -1,5 +1,6 @@
 {
   "name": "solidity-version-proxy",
+  "description": "Yet another smart contract upgrade pattern.",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/onboardmoney/solidity-version-proxy.git",

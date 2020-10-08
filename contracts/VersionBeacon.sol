@@ -8,8 +8,6 @@ interface IVersionBeacon {
 	function getImplementation(uint256 version) external view returns (address implementation);
 
 	function getLatestVersion() external view returns (uint256 latest);
-
-	function upgrade(address newImplementation) external;
 }
 
 contract VersionBeacon is IVersionBeacon, Ownable {
@@ -22,7 +20,7 @@ contract VersionBeacon is IVersionBeacon, Ownable {
 
 	// external setters
 
-	function upgrade(address newImplementation) external override onlyOwner {
+	function upgrade(address newImplementation) external onlyOwner {
 		_upgrade(newImplementation);
 	}
 
